@@ -33,10 +33,22 @@
   }
 
   function showInfo(data, tabletop) {
-    //alert('Successfully processed!')
-    data.forEach(function(v, i){
-      alert(v.Id + ". " + v.FirstName + ", " + v.LastName + ", " + v.Age)
+    let table = document.createElement("table")
+    let td = document.createElement("td")
+    
+    data.forEach(function(obj, i){
+      let tr = document.createElement("tr")
+   
+      for (key in obj){
+        let td = td.cloneNode(true)
+        td.textContent = obj[key]
+        tr.appendChild(td)
+      }
+
+      table.appendChild(tr)
     })
+
+    document.body.appendChild(table)
   }
 
   window.addEventListener('DOMContentLoaded', init)
