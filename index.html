@@ -33,9 +33,10 @@
   }
 
   function showInfo(data, tabletop) {
-    alert('Successfully processed!')
-    //console.log(data);
-    alert(data)
+    //alert('Successfully processed!')
+    data.forEach(function(v, i){
+      alert(v.Id + ". " + v.FirstName + ", " + v.LastName + ", " + v.Age)
+    })
   }
 
   window.addEventListener('DOMContentLoaded', init)
