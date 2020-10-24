@@ -14,8 +14,8 @@
          height: 100%;
        }
 
-       td{
-         padding: 5px;
+      .col{
+         padding: 10px;
        }
       </style>
     </head>
@@ -39,6 +39,7 @@
   function showInfo(data, tabletop) {
     let table = document.createElement("table")
     let td = document.createElement("td")
+    td.classList.Add("col")
     
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
