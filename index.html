@@ -6,7 +6,7 @@
       <link href="style.css" rel="stylesheet">
       <style>
        .body1{
-         background-image: url(images/images-1.jpe);
+         background-image: url(images/images-1.jpeg);
          background-size: cover;
          background-repeat: no-repeat;
          background-position: center;
@@ -15,8 +15,8 @@
        }
       </style>
     </head>
-    <body class="body1">
-      <div class="body">
+    <body class="">
+      <div class="">
         <h1>Welcome to my home page</h1>
         <a href="gallery.html">go to gallery</a>
       </div>
@@ -40,9 +40,9 @@
       let tr = document.createElement("tr")
    
       for (key in obj){
-        let td = td.cloneNode(true)
-        td.textContent = obj[key]
-        tr.appendChild(td)
+        let col = td.cloneNode(true)
+        col.innerHTML = obj[key]
+        tr.appendChild(col)
       }
 
       table.appendChild(tr)
