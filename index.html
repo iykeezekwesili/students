@@ -20,5 +20,24 @@
         <h1>Welcome to my home page</h1>
         <a href="gallery.html">go to gallery</a>
       </div>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+<script type='text/javascript'>    
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bpsbTnO0htQFm7thHX-e4EeD5igujYT3b1tR_3WeIAc/edit?usp=sharing';
+
+  function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    alert('Successfully processed!')
+    console.log(data);
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+</script>
     </body>
 </html>
