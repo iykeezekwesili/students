@@ -14,8 +14,9 @@
          height: 100%;
        }
 
-      .col{
+       .table td{
          padding: 10px;
+         color: red;
        }
       </style>
     </head>
@@ -38,8 +39,8 @@
 
   function showInfo(data, tabletop) {
     let table = document.createElement("table")
-    let td = document.createElement("td")
-    td.classList.add("col")
+    table.classList.add("table")
+    let td = document.createElement("td") 
     
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
