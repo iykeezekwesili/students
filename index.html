@@ -18,6 +18,10 @@
          padding: 10px;
          color: red;
        }
+
+       .table tr::even{
+         background: #eee;
+       }
       </style>
     </head>
     <body class="">
@@ -25,6 +29,8 @@
         <h1>Welcome to my home page</h1>
         <a href="gallery.html">go to gallery</a>
       </div>
+
+      <table class="table"></table>
 
       <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
@@ -38,8 +44,7 @@
   }
 
   function showInfo(data, tabletop) {
-    let table = document.createElement("table")
-    table.classList.add("table")
+    let table = document.querySelector(".table")
     let td = document.createElement("td") 
     
     data.forEach(function(obj, i){
@@ -53,8 +58,6 @@
 
       table.appendChild(tr)
     })
-
-    document.body.appendChild(table)
   }
 
   window.addEventListener('DOMContentLoaded', init)
