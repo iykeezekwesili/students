@@ -15,13 +15,13 @@
 
        .table{
          border-collapse: collapse;
-         overflow: ;
+         overflow: auto;
        }
 
        .table tbody td, .table thead th{
          padding: 10px;
          color: #222;
-         margin: 0px;
+         margin: 0x; 
        }
 
        .table thead th{
@@ -42,6 +42,10 @@
          color: #eee;
          border-bottom: solid 1px #e4e4e4;
        }
+
+       .table-container{
+         width: 100%;
+       }
       </style>
     </head>
     <body class="">
@@ -50,6 +54,7 @@
         <a href="gallery.html">go to gallery</a>
       </div>
 
+      <div class="table-container">
       <table class="table">
         <thead>
           <tr>
@@ -62,6 +67,7 @@
         </thead>
         <tbody><tbody>
       </table>
+      </div>
 
       <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
