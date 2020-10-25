@@ -18,26 +18,26 @@
          border-collapse: collapse;
        }
 
-       .table td, .table th{
+       .table tbody td, .table thead th{
          padding: 10px;
          color: red;
          margin: 0px;
        }
 
-       .table th{
+       .table thead th{
          border-right: solid 1px #555;
        } 
 
-       .table tr th{
+       .table thead th{
          background: #333;
          color: #eee;
        }
 
-       .table tr:nth-child(2n){
+       .table tbody tr:nth-child(2n){
          background-color: #e4e4e4;
        }
 
-       .table tr td:first-child{
+       .table tbody tr td:first-child{
          background: #555;
          color: #eee;
          border-bottom: solid 1px #e4e4e4;
@@ -51,12 +51,15 @@
       </div>
 
       <table class="table">
-        <tr>
-          <th>ID</th>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Age</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody><tbody>
       </table>
 
       <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
@@ -71,7 +74,7 @@
   }
 
   function showInfo(data, tabletop) {
-    let table = document.querySelector(".table")
+    let table = document.querySelector("tbody")
     let td = document.createElement("td") 
     
     data.forEach(function(obj, i){
