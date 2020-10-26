@@ -91,8 +91,9 @@
 
   function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
-                     simpleSheet: true } 
-    ).then((data, tabletop) => showInfo(data, tabletop)) 
+                     simpleSheet: true, 
+                     callback: showInfo }
+    ) 
   }
 
   function showInfo(data, tabletop) {
