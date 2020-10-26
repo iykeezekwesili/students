@@ -89,14 +89,15 @@
 <script type='text/javascript'>    
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bpsbTnO0htQFm7thHX-e4EeD5igujYT3b1tR_3WeIAc/edit?usp=sharing';
 
-  function init() {
+  async function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
                      simpleSheet: true, 
-                     callback: showInfo }
+                     callback: await showInfo }
     ).then(function(){alert("done")})
   }
 
   function showInfo(data, tabletop) {
+    return new Promise(resolve => {
     let table = document.querySelector("tbody")
     let td = document.createElement("td") 
     
@@ -111,6 +112,8 @@
 
       table.appendChild(tr)
     })
+    resolve()
+    } 
   }
 
   window.addEventListener('DOMContentLoaded', init)
