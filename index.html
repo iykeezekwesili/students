@@ -93,7 +93,7 @@
     Tabletop.init( { key: publicSpreadsheetUrl,
                      simpleSheet: true, 
                      callback: showInfo }
-    ) 
+    ).then(function(){alert("done")})
   }
 
   function showInfo(data, tabletop) {
