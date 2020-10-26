@@ -88,11 +88,11 @@
 
 <script type='text/javascript'>    
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bpsbTnO0htQFm7thHX-e4EeD5igujYT3b1tR_3WeIAc/edit?usp=sharing';
-  var x
+  
   async function init() {
-    Tabletop.init( { key: publicSpreadsheetUrl,
+    var x = await Tabletop.init( { key: publicSpreadsheetUrl,
                      simpleSheet: true, 
-                     callback: function(){x = await showInfo} }
+                     callback: showInfo }
     )
     alert(x)
   }
@@ -114,7 +114,7 @@
       table.appendChild(tr)
     })
     resolve("done")
-    } 
+    })
   }
 
   window.addEventListener('DOMContentLoaded', init)
