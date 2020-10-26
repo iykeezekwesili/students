@@ -52,6 +52,23 @@
          width: 100%;
          overflow: auto;
        }
+
+       .fa-spinner{
+         display: block;
+         margin: 0px auto;
+         animation: spin 1s infinite;
+         font-size: 2em;
+       }
+
+       @keyframes spin{
+         from{
+           transform: rotate(0deg);
+         }
+
+         to{
+           transform: rotate(360deg);
+         }
+       } 
       </style>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
@@ -76,7 +93,7 @@
       </table>
       </div>
 
-      <i class="fas fa-clock"></i>
+      <i class="fas fa-spinner"></i>
 
       <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
