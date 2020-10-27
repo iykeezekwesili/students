@@ -97,9 +97,12 @@
   } 
 
   function showInfo(data, tabletop) {
-    let table = document.querySelector("tbody")
+    let tbody= document.querySelector("tbody")
     let td = document.createElement("td") 
     
+    let spin = document.querySelector('.fa-spinner')
+    delete spin
+
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
    
@@ -109,7 +112,7 @@
         tr.appendChild(col)
       }
 
-      table.appendChild(tr)
+      tbody.appendChild(tr)
     })
   }
 
