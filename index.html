@@ -101,7 +101,7 @@
     let td = document.createElement("td") 
     
     let spin = document.querySelector('.fa-spinner')
-    delete spin
+    spin.parentNode.removeChild(spin)
 
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
