@@ -130,7 +130,9 @@
 
   function show(){
     //showInfo(sheetData)
-    tbody.innerHTML = ""
+    while (tbody.hasChildNodes()){
+      tbody.removeChild(tbody.firstChild)
+    }
   } 
 
   window.addEventListener('DOMContentLoaded', init)
