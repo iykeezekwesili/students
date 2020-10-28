@@ -113,7 +113,7 @@
     let spin = document.querySelector('.fa-spinner')
     spin.parentNode.removeChild(spin)
 
-    tbody.innerHTML = ""
+    //tbody.innerHTML = ""
 
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
@@ -133,7 +133,7 @@
     tbody.innerHTML = ""
   } 
 
-  window.EventListener('DOMContentLoaded', init)
+  window.addEventListener('DOMContentLoaded', init)
 </script>
     </body>
 </html>
