@@ -96,7 +96,7 @@
     )
   } 
 
-  function showInfo(data) {
+  function showInfo(data, tabletop) {
     let tbody= document.querySelector("tbody")
     let td = document.createElement("td") 
     
@@ -114,6 +114,7 @@
 
       tbody.appendChild(tr)
     })
+    alert(tabletop)
   }
 
   window.addEventListener('DOMContentLoaded', init)
