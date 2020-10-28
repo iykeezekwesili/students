@@ -113,6 +113,8 @@
     let spin = document.querySelector('.fa-spinner')
     spin.parentNode.removeChild(spin)
 
+    tbody.innerHTML = ""
+
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
    
@@ -127,7 +129,7 @@
   }
 
   function show(){
-    alert(sheetData[0].FirstName)
+    showInfo(sheetData)
   } 
 
   window.addEventListener('DOMContentLoaded', init)
