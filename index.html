@@ -60,7 +60,7 @@
        }
 
        a{
-         color: red;
+         color: green;
        }
       </style>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -70,6 +70,7 @@
         <h1>Welcome to my home page</h1>
         <a href="gallery.html">go to gallery</a>
       </div>
+      <button type="button" onclick="show()">show</button>
 
       <div class="table-container">
       <table class="table">
@@ -95,16 +96,19 @@
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bpsbTnO0htQFm7thHX-e4EeD5igujYT3b1tR_3WeIAc/edit?usp=sharing';
   
   function init() {
-    Tabletop.init( { key: publicSpreadsheetUrl,
-                     simpleSheet: true, 
-                     callback: function(data, tabletop){showInfo(data, tabletop)} }
-    )
+    Tabletop.init({ 
+        key: publicSpreadsheetUrl,
+        simpleSheet: true, 
+        callback: function(data, tabletop){
+            showInfo(data, tabletop)
+            sheetData = data
+        } 
+    })
   } 
 
   function showInfo(data, tabletop) {
     let tbody= document.querySelector("tbody")
     let td = document.createElement("td")
-    sheetData = data
     
     let spin = document.querySelector('.fa-spinner')
     spin.parentNode.removeChild(spin)
@@ -121,6 +125,10 @@
       tbody.appendChild(tr)
     })
   }
+
+  function show(){
+    alert(sheetData[0].FirstName)
+  } 
 
   window.addEventListener('DOMContentLoaded', init)
 </script>
