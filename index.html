@@ -100,7 +100,7 @@
         key: publicSpreadsheetUrl,
         simpleSheet: true, 
         callback: function(data, tabletop){
-            //showInfo(data, tabletop)
+            showInfo(data, tabletop)
             sheetData = data
         } 
     })
@@ -129,10 +129,11 @@
   }
 
   function show(){
-    showInfo(sheetData)
+    //showInfo(sheetData)
+    tbody.innerHTML = ""
   } 
 
-  window.addEventListener('DOMContentLoaded', init)
+  window.EventListener('DOMContentLoaded', init)
 </script>
     </body>
 </html>
