@@ -97,6 +97,7 @@
         <table class="tblAll">
           <thead>
             <tr>
+              <th>Id</th>
               <th>Lastname</th>
               <th>Firstname</th>
             </tr>
@@ -167,12 +168,18 @@
    
       for (key in obj){
         let col1 = td.cloneNode(true)
-        col1.innerHTML = obj['LastName']
+        col1.innerHTML = obj['Id']
         tr.appendChild(col1)
 
         let col2 = td.cloneNode(true)
-        col2.innerHTML = obj['FirstName']
+        col2.innerHTML = obj['LastName']
         tr.appendChild(col2)
+
+        let col3 = td.cloneNode(true)
+        col3.innerHTML = obj['FirstName']
+        tr.appendChild(col3)
+
+        continue
       }
 
       tbody.appendChild(tr)
