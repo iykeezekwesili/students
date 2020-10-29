@@ -172,12 +172,12 @@
     tblall.style.display = "none"
     tblone.style.display = "block"
 
-    sheetData.forEach(function(obj, i)){
+    sheetData.forEach(function(obj, i){
       if (obj.Id == pwd.value){
         displayStudent(obj) 
         return
       }
-    }
+    }) 
   }
 
   function studSelected(e){
