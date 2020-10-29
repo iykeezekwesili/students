@@ -191,6 +191,7 @@
   }
 
   function displayStudent(obj){
+    document.querySelector('.pic').src = "images/" + obj.Picture
     document.getElementById('firstname').textContent = obj.FirstName
     document.getElementById('lastname').textContent = obj.LastName
     document.getElementById('state').textContent = obj.State
