@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
       <link href="style.css" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
       <style>
        body{
          padding: 0px;
@@ -23,7 +24,7 @@
 
        .banner h1{
          color: #fff;
-         font-size: 2em;
+         font-size: 1.5em;
          font-weight: 300;
        }
 
@@ -95,7 +96,6 @@
          color: red;
        }
       </style>
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
 
     <body>
@@ -181,7 +181,6 @@
       let tr = document.createElement("tr")
       //tr.addEventListener("click", studSelected)
    
-      //for (key in obj){
         let col1 = td.cloneNode(true)
         col1.innerHTML = obj['Id']
         tr.appendChild(col1)
@@ -193,9 +192,6 @@
         let col3 = td.cloneNode(true)
         col3.innerHTML = obj['FirstName']
         tr.appendChild(col3)
-
-        //continue
-      //}
 
       tbody.appendChild(tr)
     })
