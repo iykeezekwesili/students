@@ -17,6 +17,7 @@
 
        .tblAll{
          border-collapse: collapse;
+         width: 100%;
          margin: 0px aut;
        }
 
@@ -164,7 +165,7 @@
 
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
-      tr.addEventListener("click", studSelected)
+      //tr.addEventListener("click", studSelected)
    
       //for (key in obj){
         let col1 = td.cloneNode(true)
