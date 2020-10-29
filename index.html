@@ -108,19 +108,19 @@
           </tr>
           <tr>
             <th>Firstname:</th>
-            <td></td>
+            <td id="firstname"></td>
           </tr>
           <tr>
             <th>Lastname:</th>
-            <td></td>
+            <td id="lastname"></td>
           </tr>
           <tr>
             <th>Date of Birth:</th>
-            <td></td>
+            <td id="dob"></td>
           </tr>
           <tr>
             <th>State:</th>
-            <td></td>
+            <td id="state"></td>
           </tr>
         </table>
       </div>
@@ -185,9 +185,10 @@
   }
 
   function displayStudent(obj){
-    for (k in obj){
-      alert(obj[k]) 
-    }
+    document.getElementById('firstname').textContent = obj.FirstName
+    document.getElementById('lastname').textContent = obj.LastName
+    document.getElementById('state').textContent = obj.State
+    document.getElementById('dob').textContent = obj['Date of birth'] 
   }
 
   window.addEventListener('DOMContentLoaded', init)
