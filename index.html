@@ -97,11 +97,8 @@
         <table class="tblAll">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Firstname</th>
               <th>Lastname</th>
-              <th>DoB</th>
-              <th>State</th>
+              <th>Firstname</th>
             </tr>
           </thead>
           <tbody><tbody>
@@ -120,6 +117,10 @@
           <tr>
             <th>Lastname:</th>
             <td id="lastname"></td>
+          </tr>
+          <tr>
+            <th>Department</th>
+            <td id="dept"></td>
           </tr>
           <tr>
             <th>Date of Birth:</th>
@@ -165,9 +166,13 @@
       tr.addEventListener("click", studSelected)
    
       for (key in obj){
-        let col = td.cloneNode(true)
-        col.innerHTML = obj[key]
-        tr.appendChild(col)
+        let col1 = td.cloneNode(true)
+        col1.innerHTML = obj['LastName']
+        tr.appendChild(col1)
+
+        let col2 = td.cloneNode(true)
+        col2.innerHTML = obj['FirstName']
+        tr.appendChild(col2)
       }
 
       tbody.appendChild(tr)
@@ -195,6 +200,7 @@
     document.querySelector('.pic').src = "images/" + obj.Picture
     document.getElementById('firstname').textContent = obj.FirstName
     document.getElementById('lastname').textContent = obj.LastName
+    document.getElementById('dept').textContent = obj.Department
     document.getElementById('state').textContent = obj.State
     document.getElementById('dob').textContent = obj['Date of birth'] 
   }
