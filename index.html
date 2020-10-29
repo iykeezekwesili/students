@@ -131,6 +131,8 @@
 
 <script type='text/javascript'>
   var sheetData = ""
+  let tblone = document.querySelector('.tblOne')
+  let tblall = document.querySelector('.tblAll')
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bpsbTnO0htQFm7thHX-e4EeD5igujYT3b1tR_3WeIAc/edit?usp=sharing';
   
   function init() {
@@ -166,8 +168,15 @@
   }
 
   function show(){
-    let tblAll = document.querySelector(".tblAll")
+    let pwd = document.getElementById('Pwrd')
     tblAll.style.display = "none"
+    tblone.style.display = "block"
+
+    sheetData.forEach(function(v, i)){
+      if (v.Id == pwd.value){
+        
+      }
+    }
   }
 
   function studSelected(e){
