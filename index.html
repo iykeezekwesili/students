@@ -166,7 +166,7 @@
       let tr = document.createElement("tr")
       tr.addEventListener("click", studSelected)
    
-      for (key in obj){
+      //for (key in obj){
         let col1 = td.cloneNode(true)
         col1.innerHTML = obj['Id']
         tr.appendChild(col1)
@@ -179,8 +179,8 @@
         col3.innerHTML = obj['FirstName']
         tr.appendChild(col3)
 
-        continue
-      }
+        //continue
+      //}
 
       tbody.appendChild(tr)
     })
