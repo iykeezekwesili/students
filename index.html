@@ -62,13 +62,17 @@
        }
 
        a{
-         color: orange;
+         color: green;
        }
 
        .pic{
          width: 150px;
          height: 150px;
          border: 1px solid blue;
+       }
+
+       .tblOne{
+         display: none;
        }
       </style>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -79,7 +83,7 @@
         <a href="gallery.html">go to gallery</a>
       </div><br>
       <div>
-        <input type="text" placeholder="Enter your password" /><button type="button" onclick="show()">show</button>
+        <input id="txtPwrd" type="text" placeholder="Enter your password" /><button type="button" onclick="show()">show</button>
       </div>
 
       <div class="table-container">
@@ -162,10 +166,8 @@
   }
 
   function show(){
-    let tbody = document.querySelector("tbody")
-    while (tbody.hasChildNodes()){
-      tbody.removeChild(tbody.firstChild)
-    }
+    let tblAll = document.querySelector(".tblAll")
+    tblAll.style.display = "none"
   }
 
   function studSelected(e){
