@@ -1,3 +1,5 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,6 +64,12 @@
        a{
          color: orange;
        }
+
+       .pic{
+         width: 150px;
+         height: 150px;
+         border: 1px solid blue;
+       }
       </style>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
@@ -69,22 +77,48 @@
       <div class="">
         <h1>Welcome to my home page</h1>
         <a href="gallery.html">go to gallery</a>
-      </div><br><br>
-      <button type="button" onclick="show()">show</button>
+      </div><br>
+      <div>
+        <input type="text" placeholder="Enter your password" /><button type="button" onclick="show()">show</button>
+      </div>
 
       <div class="table-container">
-      <table class="table">
-        <thead>
+        <table class="tblAll">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>DoB</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody><tbody>
+        </table>
+
+        <table class="tblOne">
           <tr>
-            <th>ID</th>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>DoB</th>
-            <th>State</th>
+            <td colspan="2">
+              <img class="pic" src="pic1.jpg">
+            </td>
           </tr>
-        </thead>
-        <tbody><tbody>
-      </table>
+          <tr>
+            <th>Firstname:</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Lastname:</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Date of Birth:</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>State:</th>
+            <td></td>
+          </tr>
+        </table>
       </div>
 
       <div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
@@ -115,6 +149,7 @@
 
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
+      tr.addEventListener("click", studSelected)
    
       for (key in obj){
         let col = td.cloneNode(true)
@@ -127,11 +162,15 @@
   }
 
   function show(){
-    let tbody= document.querySelector("tbody")
+    let tbody = document.querySelector("tbody")
     while (tbody.hasChildNodes()){
       tbody.removeChild(tbody.firstChild)
     }
-  } 
+  }
+
+  function studSelected(){
+    alert('Hello World')
+  }
 
   window.addEventListener('DOMContentLoaded', init)
 </script>
