@@ -169,18 +169,25 @@
 
   function show(){
     let pwd = document.getElementById('Pwrd')
-    tblAll.style.display = "none"
+    tblall.style.display = "none"
     tblone.style.display = "block"
 
-    sheetData.forEach(function(v, i)){
-      if (v.Id == pwd.value){
-        
+    sheetData.forEach(function(obj, i)){
+      if (obj.Id == pwd.value){
+        displayStudent(obj) 
+        return
       }
     }
   }
 
   function studSelected(e){
     alert(e.target.parentNode.childNodes[1].textContent)
+  }
+
+  function displayStudent(obj){
+    for (k in obj){
+      alert(obj[k]) 
+    }
   }
 
   window.addEventListener('DOMContentLoaded', init)
