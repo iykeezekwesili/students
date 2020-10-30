@@ -100,12 +100,15 @@ a{
 }
 
 body > div:nth-child(2){
-  padding: 10px;
+  padding: 15px;
+  margin: ;
   background: #eee;
+  text-align: center;
 }
 
 body > div:nth-child(2) *{
   appearance: none;
   padding: 5px;
   border: 1px solid #aaa;
+  font-size: 1.2em;
 } 
