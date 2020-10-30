@@ -118,13 +118,11 @@ a{
   appearance: none;
   padding: 10px;
   border: none;
-  margin: 0;
-  font-size: ;
+  margin: 0px;
+  font-size: 0.6em;
 }
 
 .search button{
   background: orange;
   color: #fff;
-  padding: auto 20px;
-  display: inline-block;
 }
