@@ -117,12 +117,11 @@ a{
 .search input,.search button{
   appearance: none;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1em;
   display: inline-block;
 }
 
 .search button{
   background: orange;
   color: #fff;
-  width: 40%;
 }
