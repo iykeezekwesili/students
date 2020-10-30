@@ -72,7 +72,8 @@ body{
 }
 
 a{
-  color: red;
+  color: orange;
+  text-decoration: none;
 }
 
 .pic{
