@@ -61,7 +61,7 @@ body{
   color: #fff;
 }
 
-.tblAll-container{
+.table-container{
   width: 100%;
   overflow: auto;
   margin: 5px;
@@ -101,8 +101,7 @@ a{
 }
 
 .search{
-  padding: 15px;
-  margin: ;
+  padding: 10px;
   background: #eee;
   text-align: center;
 }
@@ -116,10 +115,8 @@ a{
 }
 
 .search input, .search button{
-  appearance: none;
   padding: 10px;
   border: none;
-  margin: 0px;
   font-size: 0.6em;
 }
 
