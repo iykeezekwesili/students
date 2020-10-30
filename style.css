@@ -1,10 +1,98 @@
-h1{
-  color: #fff;
-  text-align: center;
-}
+*{
+         box-sizing: border-box;
+       }
 
-a{
-  text-decoration: none;
-  font-size: 1.1em;
-  color: #555;
-}
+       body{
+         padding: 0px;
+         margin: 0px;
+       }
+
+       .banner{
+         background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/images.jpeg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+         width: 100%;
+         height: 40vh;
+         margin-bottom: 50px;
+         margin-top: 0px;
+       }
+
+       .banner h1{
+         color: #fff;
+         font-size: 1.5em;
+         font-weight: 300;
+       }
+
+       .tblAll{
+         border-collapse: collapse;
+         width: 100%;
+         margin: 0px aut;
+       }
+
+       .tblAll tbody tr td, .tblAll thead th{
+         padding: 10px;
+         color: #222;
+       }
+
+       .tblAll thead th{
+         border-right: solid 1px #555;
+       } 
+
+       .tblAll thead th{
+         background: #333;
+         color: #eee;
+       }
+
+       .tblAll tbody tr:nth-child(2n){
+         background-color: #e4e4e4;
+       }
+
+       .tblAll tbody tr td:first-child{
+         background: #666;
+         color: #eee;
+         margin-bottom: 1px;
+         border-botto: solid 1px #e4e4e4;
+       }
+
+       .tblAll tbody tr:hover{
+         background: #666;
+         color: #fff;
+       }
+
+       .tblAll-container{
+         width: 100%;
+         overflow: auto;
+       }
+
+       .spinner{
+         font-size: 2em;
+         text-align: center;
+         margin-top: 20px;
+       }
+
+       a{
+         color: red;
+       }
+
+       .pic{
+         width: 120px;
+         height: 120px;
+         border: 2px solid green;
+         border-radius: 50%;
+       }
+
+       .tblOne{
+         display: none;
+         text-align: left;
+       }
+
+       .tblOne th{
+         padding-right: 10px;
+         color: red;
+       }
+
+       #lastname, #firstname{
+         font-size: 1.3em;
+         color: blue;
+       }
