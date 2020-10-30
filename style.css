@@ -109,7 +109,7 @@ a{
 .search *{
   appearance: none;
   padding: 5px;
-  border: 1px solid #aaa;
+  border: 1px solid orange;
   font-size: 1em;
   display: inline-block;
 }
@@ -117,4 +117,9 @@ a{
 .search input{
   border-right: none;
   border-radius: 5px 0px 0px 5px;
+}
+
+.search button{
+  border-radius: 0px 5px 5px 0px;
+  background: orange;
 }
