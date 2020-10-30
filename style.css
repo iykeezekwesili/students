@@ -96,3 +96,14 @@ a{
   font-size: 1.3em;
   color: blue;
 }
+
+body > div:nth-child(2){
+  padding: 10px;
+  background: #eee;
+}
+
+body > div:nth-child(2) *{
+  appearance: none;
+  padding: 5px;
+  border: 1px solid #aaa;
+} 
