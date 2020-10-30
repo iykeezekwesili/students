@@ -118,6 +118,7 @@ a{
   appearance: none;
   padding: 10px;
   border: none;
+  margin: 0;
 }
 
 .search button{
