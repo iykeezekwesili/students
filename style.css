@@ -63,6 +63,7 @@ body{
 .tblAll-container{
   width: 100%;
   overflow: auto;
+  margin: 5px;
 }
 
 .spinner{
