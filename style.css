@@ -118,9 +118,11 @@ a{
   appearance: none;
   padding: 10px;
   font-size: 1.5em;
+  display: inline-block;
 }
 
 .search button{
   background: orange;
   color: #fff;
+  width: 40%;
 }
