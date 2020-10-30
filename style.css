@@ -117,7 +117,7 @@ a{
 .search input, .search button{
   appearance: none;
   padding: 10px;
-  font-size: ;
+  border: none;
 }
 
 .search button{
