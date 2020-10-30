@@ -114,12 +114,12 @@ a{
   overflow: hidden;
 }
 
-.search input,.search button{
+.search input, .search button{
   appearance: none;
   padding: 10px;
-  font-size: 1em;
+  font-size: ;
   display: inline-block;
-  width: 40%;
+  width: 30%;
 }
 
 .search button{
