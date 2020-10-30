@@ -122,5 +122,6 @@ a{
 
 .search button{
   background: orange;
-  color: #fff; 
+  color: #fff;
+  padding: auto 20px;
 }
