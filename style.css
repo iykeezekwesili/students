@@ -125,4 +125,5 @@ a{
   background: orange;
   color: #fff;
   padding: auto 20px;
+  display: inline-block;
 }
