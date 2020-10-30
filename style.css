@@ -110,5 +110,6 @@ body > div:nth-child(2) *{
   appearance: none;
   padding: 5px;
   border: 1px solid #aaa;
-  font-size: 1.2em;
+  font-size: 1em;
+  display: inline-block;
 } 
