@@ -41,6 +41,14 @@ body{
 		color: green;
 	}
 
+.tblOne{
+  margin-top: 15px;
+}
+
+.tblOne tr td:first-child{
+  width: 50%;
+}
+
 .tblAll{
   border-collapse: collapse;
   width: 100%;
