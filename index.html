@@ -123,10 +123,15 @@
     })
   }
 
+  var img = document.createElement("img")
+  img.src = "images/image-0.jpg"
+
   function show(){
     let pwd = document.getElementById('txtPwrd')
     tblall.style.display = "none"
     tblone.style.display = "block"
+
+    document.querySelector('.pic').src = img.src
 
     sheetData.forEach(function(obj, i){
       if (obj.Id == pwd.value){
