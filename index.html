@@ -9,7 +9,17 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
       <style>
-        
+        .show-students{
+          display: block;
+          width: 100%;
+          border: none;
+          padding:10px;
+          background: teal;
+          color: #fff;
+          margin: 10px 0px;
+          border-radius: 5px;
+          box-shadow: 3px 3px 3px #666;
+        }
       </style>
     </head>
 
@@ -74,6 +84,11 @@
             <th>Phone:</th>
             <td id="phone"></td>
           </tr>
+          <tr>
+            <td colspan="2">
+              <button type="button" class="all-students" onclick="showAllStudents()">Show all students</button>
+            </td>
+          </tr>
         </table>
       </div>
 
@@ -94,7 +109,12 @@
             sheetData = data
         } 
     })
-  } 
+  }
+
+  function showAllStudents(){
+    tblall.style.display = "block"
+    tblone.style.display = "none"
+  }
 
   function showInfo(data, tabletop) {
     let tbody= document.querySelector("tbody")
