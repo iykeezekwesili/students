@@ -9,16 +9,16 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
       <style>
-        .all-students{
+        .show-students, .scores{
           display: block;
           width: 100%;
           border: none;
           padding:10px;
           background: teal;
           color: #fff;
-          margin: 10px 0px;
-          border-radius: 5px;
-          box-shadow: 3px 3px 3px #666;
+          margin: 15px 0px;
+          border-radius: 3px;
+          box-shado: 3px 3px 3px #ccc;
         }
       </style>
     </head>
@@ -53,7 +53,7 @@
         <table class="tblOne">
           <tr>
             <td>
-              <img class="pic" src="pic1.jpg">
+              <img class="pic" src="pic1.jpg" onclick="enlargeImage()>
             </td>
             <td>
               <span id="lastname"></span>&nbsp;
@@ -61,7 +61,7 @@
             </td>
           </tr>
           <tr>
-            <th>Department</th>
+            <th>Department:</th>
             <td id="dept"></td>
           </tr>
           <tr>
@@ -86,7 +86,7 @@
           </tr>
           <tr>
             <td>
-              <button type="button" class="all-students" onclick="showAllStudents()">Show all students</button>
+              <button type="button" class="show-students" onclick="showAllStudents()">Show all students</button>
             </td>
             <td>
               <button type="button" class="scores" onclick="scores()">My scores</button>
@@ -163,6 +163,10 @@
         return
       }
     }) 
+  }
+
+  function enlargeImage(){
+    alert(localStorage.studentInfo.Picture)
   }
 
   function scores(){
