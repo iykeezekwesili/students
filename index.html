@@ -185,7 +185,7 @@
     document.getElementById('religion').textContent = obj.Religion
     document.getElementById('phone').textContent = obj.Phone
 
-    localStorage.setItem("studentInfo", obj)
+    localStorage.setItem("studentInfo", JSON.stringify(obj))
   }
  
   window.addEventListener('DOMContentLoaded', init)
