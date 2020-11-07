@@ -18,7 +18,7 @@
           color: #fff;
           margin: 15px 0px;
           border-radius: 3px;
-          box-shado: 3px 3px 3px #ccc;
+          box-shadow: 3px 3px 3px #ccc;
         }
       </style>
     </head>
@@ -158,7 +158,7 @@
 
     sheetData.forEach(function(obj, i){
       if (obj.Phone == pwd.value){
-        localStorage.studentInfo = obj
+        localStorage.setItem("studentInfo", obj)
         displayStudent(obj) 
         return
       }
@@ -166,7 +166,7 @@
   }
 
   function enlargeImage(){
-    var stud = localStorage.studentInfo
+    var stud = localStorage.getItem("studentInfo")
     alert(stud.Phone)
   }
 
