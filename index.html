@@ -158,7 +158,7 @@
 
     sheetData.forEach(function(obj, i){
       if (obj.Phone == pwd.value){
-        localStorage.studentInfo = "obj"
+        localStorage.studentInfo = obj
         displayStudent(obj) 
         return
       }
