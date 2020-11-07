@@ -89,7 +89,7 @@
               <button type="button" class="all-students" onclick="showAllStudents()">Show all students</button>
             </td>
             <td>
-              <a href="scores.html?name=Iykeman" class="scores">My scores</a>
+              <button type="button" class="scores" onclick="scores()">My scores</button>
             </td>
           </tr>
         </table>
@@ -164,8 +164,9 @@
     }) 
   }
 
-  function studSelected(e){
-    alert(e.target.parentNode.childNodes[1].textContent)
+  function scores(){
+    localStorage.name = "Agali"
+    window.location.href = "scores.html?class=ss1a"
   }
 
   function displayStudent(obj){
