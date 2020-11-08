@@ -151,6 +151,9 @@
 
   function show(){
     let pwd = document.getElementById('txtPwrd')
+
+    if (pwd.value.trim() == "") return
+
     tblall.style.display = "none"
     tblone.style.display = "block"
 
