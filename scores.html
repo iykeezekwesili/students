@@ -11,6 +11,7 @@
 		background-image: linear-gradient(teal 40%, white);
 		background-repeat: no-repeat;
 		margin-bottom: 30px;
+                background-size: cover;
 	}
 	
 	.banner .stud-logo{
@@ -35,6 +36,7 @@
 	  border-collapse: collapse;
 	  text-align: center;
 	  margin:5px auto;
+          border-radius: 5px;
 	}
 	
 	.scores tr:first-child th, .scores tr th:first-child, .scores tr:first-child{
@@ -52,7 +54,6 @@
     <script>
       $(document).ready(function(){
         var stud = JSON.parse(localStorage.studentInfo)
-        //alert(stud.State)
 
         var td = $('.scores td')
         td.eq(0).text(stud.Com_Test_1)
@@ -62,8 +63,10 @@
         td.eq(4).text(stud.Dp_Test_2)
         td.eq(5).text(stud.Dp_Exam)
 
-        $('.stud-logo img').attr('src', 'images/' + stud.Picture)
-        $('.stud-name').text(stud.LastName +' '+ stud.FirstName) 
+        $('.stud-logo img').attr('src', 'images/' + stud.Picture)                                                                                  
+        $('.stud-name').text(stud.LastName +' '+ stud.FirstNam
+
+        document.querySelector('.banner').style.backgroundImage = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/" + stud.Picture + ")"
      })
     </script>
   </head>
