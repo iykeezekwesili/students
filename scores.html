@@ -28,7 +28,7 @@
 		width: 100px;
 		height: 100px;
 		border-radius: 50%;
-		box-shadow: 0px 0px 1px 5px white;
+		box-shadow: 3px 3px 3px #333;
 	}
 
         .scores{
@@ -63,7 +63,7 @@
         td.eq(5).text(stud.Dp_Exam)
 
         $('.stud-logo img').attr('src', 'images/' + stud.Picture)
-        $('.stud-name').text(stud.LastName +' '+ stud.LastName) 
+        $('.stud-name').text(stud.LastName +' '+ stud.FirstName) 
      })
     </script>
   </head>
@@ -72,7 +72,7 @@
     <div class="banner">
 		<div class="stud-logo">
 			<img>
-			<h4 class="stud-name">Aiming for Excellence</h4>
+			<h3 class="stud-name"></h3>
 		</div>
 	</div>
 	
