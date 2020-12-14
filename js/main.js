@@ -1,19 +1,17 @@
-  //var sheetData = ""
   var tblone = document.querySelector('.tblOne')
   var tblall = document.querySelector('.tblAll')
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1bpsbTnO0htQFm7thHX-e4EeD5igujYT3b1tR_3WeIAc/edit?usp=sharing';
   
   function init() {
 
-    if(localStorage.studsData != undefined){
+    /**if(localStorage.studsData != undefined){
         showInfo(JSON.parse(localStorage.studsData))
-    }
+    }**/
 
     Tabletop.init({ 
         key: publicSpreadsheetUrl,
         simpleSheet: true, 
         callback: function(data, tabletop){
-            //sheetData = data
             localStorage.studsData = JSON.stringify(data)
             showInfo(data, tabletop)
         } 
