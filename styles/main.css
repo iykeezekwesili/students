@@ -3,69 +3,89 @@
   font-family: 'Spartan', sans-serif;
 }
 
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+
 body{
   padding: 0px;
   margin: 0px;
 }
 
-.banner{
-		height: 300px;
-		backgroun: black;
-		color: #006666;
-		position: relative;
-		background: linear-gradient(54.5deg, rgba(0,153,153,0.6) 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0)),
-					linear-gradient(rgba(0,0,0,0) 60%, rgba(65,88,88,1) 60%, rgba(65,88,88,1))
-	}
-	
-	.banner .title{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		padding: 5px;
-	}
-	
-	.title a{
-		color: #fff;
-		text-decoration: none;
-		display: inline-block;
-		padding: 10px;
-		background: orange;
-		border-radius: 5px;
-		margin-top: 5em;
-		box-shadow: 3px 3px 5px #222
-	}
-	
-	.title a i{
-		color: green;
-	}
+.banner{	
+  height: 300px;
+  backgroun: black;
+  color: #006666;
+  position: relative;
+  background: linear-gradient(54.5deg, rgba(0,153,153,0.6) 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0)),
+			              linear-gradient(rgba(0,0,0,0) 60%, rgba(65,88,88,1) 60%, rgba(65,88,88,1))
+}
+
+.banner .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 5px;
+}
+
+.title a{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  background: orange;
+  border-radius: 5px;
+  margin-top: 5em;
+  box-shadow: 3px 3px 5px #222
+}
+
+.title a i{
+  color: green;
+}
+.nav{
+  background: #555;
+}
+    
+.nav a{
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: #eee;
+}
 
 .tblOne{
-    margin: 0 auto;
-    margin-top: 15px;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .tblOne tr td:first-child{
-    width: 50%;
+  width: 50%;
 }
 
 .tblAll{
-    border-collapse: collapse;
-    width: 50%;
-    margin: 0px auto;
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0px auto;
 }
 
-.tblAll tbody tr td, .tblAll thead th{
-    padding: 10px;
-    color: #222;
+.tblAll tbody td{
+  font-size: 1.4em;
+}
+
+.tblAll tbody tr td, .tblAll thead th{  
+  padding: 10px;
+  color: #222;
 }
 
 .tblAll thead th{
-    border-right: solid 1px #555;
-    background: #333;
-    color: #eee;
-    text-align: left;
+  border-right: solid 1px #555;
+  background: #333;
+  color: #eee;
+  text-align: left;
 }
 
 .tblAll tbody tr:nth-child(2n){
@@ -112,49 +132,13 @@ body{
 .tblOne th{
   padding-right: 10px;
   color: red;
+  text-align: left;
 }
 
 #lastname, #firstname{
   font-size: 1.3em;
   color: blue;
 }
-
-.search{
-  padding: 50px 10px 10px 10px;
-  text-align: center;
-}
-
-.search span{
-  border: 1px solid orange;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: 1.5em;
-  overflow: hidden;
-}
-
-.search input, .search button{
-  padding: 10px;
-  border: none;
-  font-size: 0.6em;
-}
-
-.search button{
-  background: orange;
-  color: #fff;
-}
-    .search span{
-        width: 35%;
-        text-align: left
-    }
-    
-    .search input{
-        width: 90%;
-        border: none;
-    }
-    
-    .search button{
-        width: 10%;
-    }
 
 .show-students, .scores{
   display: block;
@@ -167,63 +151,97 @@ body{
   border-radius: 3px;
   box-shadow: 3px 3px 3px #ccc;
 }
+     
+.search{
+  border: 1px solid teal;
+  display: block;
+  width: 50%;
+  margin: 40px auto 20px auto;
+  border-radius: 3px;
+  overflow: hidden;
+}
+     
+.search input, .search button{
+  margin: 0;
+  padding: 10px;
+  border: none;
+  float: left;
+  font-size: 1.2em;
+  display: inline-block
+}
+     
+.search input{
+  width: 80%;
+  color: teal;
+  font-weight: 700;
+}
+     
+.search button{
+  width: 20%;
+  background: teal;
+  color: #fff;
+}
 
-
-/** 
+/**
   RESPONSIVE STYLES
 **/
 
+
 /** Tablet portrait **/
 @media screen and (max-width:600px){
-    .tblAll{
-        width: 90%;
-    }
-    
-    .tblOne{
-        width: 90%;
-    }
-    
-    .search input{
-        width: 90%;
-        border: none;
-    }
-    
-    .search button{
-        width: 10%;
-    }
+  .tblAll{
+    width: 90%;
+  }
+
+  .tblOne{
+    width: 90%;
+  }
+ 
+  .search {
+    width: 70%;
+  }
 }
 
 /** mobilephone portrait **/
 @media screen and (max-width:320px){
-    .tblAll{
-        width: 90%;    
-    }
-    
-    .tblAll tbody td{
-        font-size: 14px;
-    }
-    
-    .tblOne{
-        width: 100%;
-    }
-    
-    .search input{
-        width: 80%;
-        border: none;
-    }
-    
-    .search button{
-        width: 20%;
-    }
+  .tblAll{
+    width: 95%;
+  }
+
+  .tblAll tbody td{
+    font-size: 14px;
+  }
+
+  .tblOne{
+    width: 100%;
+  }
+ 
+  .search{
+    width: 93%;
+  }
+
+  .search input{
+    width: 80%;
+  }
+
+  .search button{
+    width: 20%;
+  }
+ 
+  #time{
+    display: none;
+  }
 }
 
+
 @media screen and (max-width:600px) and (min-width:320px){
-    .search span{
-        width: 90%;
-        text-align: left
-    }
-    
-    .search input:focus{
-        border: none;
-    }
+  .search span{
+    width: 90%;
+    text-align: left
+  }
+
+  .search input:focus{
+    border: none;
+  }
 }
+
