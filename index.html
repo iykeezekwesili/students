@@ -1,94 +1,123 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>SS1 - Main page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <head>
-      <link href="styles/main.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/time.js"></script>
 
-      <style type="text/css">
-        
-      </style>
-    </head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    
+    <style type="text/css">
+      
+    </style>
+  </head>
 
-    <body>
-      <div class="banner">
-        <div class="title">
-          <h2>Welcome to SS-1 class</h2>
-          <h5>Aiming for Excellence</h5>
-	  <a href="#">Class teacher profile <i class="fas fa-user-tie"></i></a>
+  <body>
+    <div class="banner">
+      <div class="title">
+        <h2>Welcome to SS-1 class</h2>
+        <h5>Aiming for Excellence</h5>
+        <div style="position:relative">
+          <a href="class-teacher.html">Class teacher profile <i class="fas fa-user-tie"></i></a>
+          <span id="time" style="float:right; font-size:2em; color:silver; position:absolute; bottom:5px; right:20px"></span>
         </div>
       </div>
+    </div>
+  
+    <div class="nav">
+      <a href="gallery.html" target="_blank" >Gallery</a>
+      <a href="#">Event</a><a href="#">Weekly Quotes</a>
+    </div>
+    
+    <div class="search clearfix">
+        <input id="txtPwrd" type="password" placeholder="Enter your password" />
+        <button type="button" onclick="show()"><i class="fas fa-search"></i></button>
+    </div>
 
-      <div class="search">
-        <span>
-          <input id="txtPwrd" type="text" placeholder="Enter your password" /><button type="button" onclick="show()"><i class="fas fa-search"></i></button>
-        </span>
-      </div>
+    <div class="table-container">
+      <table class="tblAll">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Lastname</th>
+            <th>Firstname</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-      <div class="table-container">
-        <table class="tblAll">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Lastname</th>
-              <th>Firstname</th>
-            </tr>
-          </thead>
-          <tbody><tbody>
-        </table>
+      <table class="tblOne">
+        <tr>
+          <td>
+            <img class="pic" src="pic1.jpg" onclick="enlargeImage()">
+          </td>
+          <td>
+            <span id="lastname"></span>&nbsp;
+            <span id="firstname"></span>
+          </td>
+        </tr>
+        
+        <tr>
+          <th>Department:</th>
+          <td id="dept"></td>
+        </tr>
+        
+        <tr>
+          <th>Date of Birth:</th>
+          <td id="dob"></td>
+        </tr>
 
-        <table class="tblOne">
-          <tr>
-            <td>
-              <img class="pic" src="pic1.jpg" onclick="enlargeImage()">
-            </td>
-            <td>
-              <span id="lastname"></span>&nbsp;
-              <span id="firstname"></span>
-            </td>
-          </tr>
-          <tr>
-            <th>Department:</th>
-            <td id="dept"></td>
-          </tr>
-          <tr>
-            <th>Date of Birth:</th>
-            <td id="dob"></td>
-          </tr>
-          <tr>
-            <th>State:</th>
-            <td id="state"></td>
-          </tr>
-          <tr>
-            <th>Gender:</th>
-            <td id="sex"></td>
-          </tr>
-          <tr>
-            <th>Religion:</th>
-            <td id="religion"></td>
-          </tr>
-          <tr>
-            <th>Phone:</th>
-            <td id="phone"></td>
-          </tr>
-          <tr>
-            <td>
-              <button type="button" class="show-students" onclick="showAllStudents()">Show all students</button>
-            </td>
-            <td>
-              <button type="button" class="scores" onclick="scores()">My scores</button>
-            </td>
-          </tr>
-        </table>
-      </div>
+        <tr>
+          <th>State:</th>
+          <td id="state"></td>
+        </tr>
 
-      <div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <tr>
+          <th>Gender:</th>
+          <td id="sex"></td>
+        </tr>
 
-      <p id="objs"></p>
+        <tr>
+          <th>Religion:</th>
+          <td id="religion"></td>
+        </tr>
 
-        <script type='text/javascript' src="js/main.js"></script>
-    </body>
+        <tr>
+          <th>Phone:</th>
+          <td id="phone"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <button type="button" class="show-students" onclick="showAllStudents()">Show all students</button>
+          </td>
+          <td>
+            <button type="button" class="scores" onclick="scores()">My scores</button>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
+    <p id="objs"></p>
+
+    <script type='text/javascript' src="js/main.js"></script>
+
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
