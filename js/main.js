@@ -29,7 +29,6 @@
 
     data.forEach(function(obj, i){
       let tr = document.createElement("tr")
-      //tr.addEventListener("click", studSelected)
    
         let col1 = td.cloneNode(true)
         col1.innerHTML = obj['Id']
