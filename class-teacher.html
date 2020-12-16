@@ -125,9 +125,23 @@
  	.contact p i{
  		padding-right: 10px
  	}
+
+        .contact p:nth-child(1) a{
+           color: green;
+        } 
+
+ 	.contact p:nth-child(2) a{
+           color: blue;
+        }
+
+        .contact p:nth-child(3) {
+           color: red;
+        } 
+ 	
  	
  	.contact a{
  		text-decoration: none;
+                font-size: 14px;
  	}
  	
  	@media screen and (max-width:576px){
@@ -197,12 +211,8 @@
 		}
 			
 		.article:nth-child(2n) .article-title:first-child{
-		display: block;
+		    display: block;
 		}
-
-                .contact a{
-                   font-size: 14px;
-                 }
 	}
 </style>
 </head>
